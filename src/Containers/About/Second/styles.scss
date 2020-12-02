@@ -1,0 +1,264 @@
+.about-second-container{
+    z-index: 100;
+    h3{
+        position: relative;
+    }
+    h3::after{
+        content: "";
+        display: inline-block;
+        height: 0.5em;
+        vertical-align: bottom;
+        width: 2em;
+        border-top: 2px solid #de3926;
+        position: absolute;
+        left: 0;
+        top: 1.25em;
+    }
+    .lastname{
+        display: none;
+        .name{
+            position: relative;
+            top: -5vh;
+            opacity: 0;
+            transition: all 1s;
+            transition-delay: .5s;
+            padding: 1em 2.5em;
+            background-color: #222;
+        }
+        .name-active{
+            opacity: 1;
+            top: 0;
+        }
+        .title{
+            position: relative;
+            color: #222;
+            padding: .5em 3em; 
+            border-left: none;
+            background-color: #e7e7e7;
+            transition: all 1s;
+            transition-delay: .0s;
+            left: -100%;
+            opacity: 0;
+        }
+        .title-active{
+            opacity: 1;
+            left: 0;
+        }
+    }
+    .about-content{
+        margin-top: 0em;
+        padding: 1em;
+        padding-top: 0;
+        .me{
+
+        }
+        .about-me{
+            .services{
+                display: flex;
+                flex-direction: column;
+                flex-wrap: wrap;
+                .col{
+                    display: flex;
+                    align-items: flex-start;
+                }
+            }
+            span{
+                //display: flex;
+                flex-direction: column;
+            }
+            .clients{
+                .clients-logos-container{
+                    display: grid;
+                    grid-template-columns: 1fr;
+                    grid-template-rows: auto; 
+                    column-gap: .5em;
+                    row-gap: .5em;
+
+                    position: relative;
+                    .client{
+                        background-color: #e7e7e7;
+                        display: flex;
+                        justify-content: center;
+                        align-items: center;
+                        text-align: center;
+                        color: #222;
+                        padding: 1rem;
+                        font-size: 1rem;
+                        position: relative;
+                        img{
+                            height: auto;
+                            width: 80%;
+                            margin: .5em 1em;
+                            float: left;
+                            justify-self: center;
+                            align-self: center;
+                            
+                        }
+                    }
+                }
+            }
+            .pricing{
+                .price{
+                    padding: .5em 1em;
+                    color: #fff;
+                    background: #de3926;
+                    width: fit-content;
+                }
+            }
+        }
+    }
+}
+
+
+/* 
+  ##Device = Desktops
+  ##Screen = 1281px to higher resolution desktops
+*/
+
+@media (min-width: 1281px) {
+  
+    .about-second-container{
+        .lastname{
+            display: block;
+            position: absolute;
+            font-size: 1.5em;
+            color: #fff;
+            top: 10vh;
+            font-weight: 800;
+            display: flex;
+            flex-direction: column;
+            align-items: flex-start;
+        }
+        .about-content{
+            margin-top: 11em;
+            padding: 1em;
+            padding-top: 0;
+            .me{
+    
+            }
+            .about-me{
+                .services{
+                    span{
+                        flex-direction: row;
+                    }
+                }
+                .clients{
+                    .clients-logos-container{
+                        grid-template-columns: 1fr 1fr 1fr;
+                    }
+                }
+                
+            }
+        }
+    }
+    
+
+}
+
+/* 
+##Device = Laptops, Desktops
+##Screen = B/w 1025px to 1280px
+*/
+
+@media (min-width: 1025px) and (max-width: 1280px) {
+    .about-second-container{
+        .lastname{
+            display: block;
+            position: absolute;
+            font-size: 1.5em;
+            color: #fff;
+            top: 10vh;
+            
+            display: flex;
+            flex-direction: column;
+            align-items: flex-start;
+        }
+        .about-content{
+            margin-top: 11em;
+            padding: 1em;
+            padding-top: 0;
+            .me{
+    
+            }
+            .about-me{
+                span{
+                    flex-direction: row;
+                }
+                .services{
+
+                }
+                .clients{
+                    .clients-logos-container{
+                        grid-template-columns: 1fr 1fr 1fr;
+                    }
+                }
+            }
+        }
+    }
+}
+
+/* 
+##Device = Tablets, Ipads (portrait)
+##Screen = B/w 768px to 1024px
+*/
+
+@media (min-width: 768px) and (max-width: 1024px) {
+
+}
+
+/* 
+##Device = Tablets, Ipads (landscape)
+##Screen = B/w 768px to 1024px
+*/
+
+@media (min-width: 768px) and (max-width: 1024px) and (orientation: landscape) {
+
+//CSS
+
+}
+
+/* 
+##Device = Low Resolution Tablets, Mobiles (Landscape)
+##Screen = B/w 481px to 767px
+*/
+
+@media (min-width: 481px) and (max-width: 767px) {
+
+//CSS
+
+}
+
+/* 
+##Device = Most of the Smartphones Mobiles (Portrait)
+##Screen = B/w 320px to 479px
+*/
+
+@media (min-width: 320px) and (max-width: 480px) {
+
+//CSS
+
+}
+
+@media (min-width: 480px) and (max-width: 1024px) {
+    .about-second-container{
+        .lastname{
+        }
+        .about-content{
+            .me{
+
+            }
+            .about-me{
+                span{
+                }
+                .services{
+
+                }
+                .clients{
+                    .clients-logos-container{
+                        grid-template-columns: 1fr 1fr;
+                    }
+                }
+            }
+        }
+    }
+}

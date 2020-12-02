@@ -1,0 +1,189 @@
+.divergent-wrapper{
+    width: 100vw;
+    height: 100vh;  
+    position: absolute;
+    top: 0;
+    left: 0;
+    overflow: hidden;
+    box-sizing: border-box;
+    .divergent-img, .divergent-content{
+        width: 100%;
+        position: absolute;
+        float: left;
+        transition: left .5s, right .5s, top, .5s, bottom .5s, opacity 1s;
+        opacity: 0;
+    }
+    .divergent-img{
+        background-color: #8c8c8c;
+        height: 40vh;
+        top: 0;
+        right: -100%;
+        overflow: hidden;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        box-sizing: border-box;
+        border-bottom: 1px solid rgba(0,0,0,.2);
+    }
+    .divergent-content{
+        background-color: #fff;
+        top: 40vh;
+        height: 60vh;
+        left: -100%;
+        overflow-y: hidden;
+        padding: 0em;
+        box-sizing: border-box;
+        .content{
+            position: absolute;
+            top: 0;
+            padding-top: 1.5em;
+            z-index: 10;
+            overflow-y: auto;
+            max-height: 100vh;
+            box-sizing: border-box;
+            width: 100vw;
+            height: 60vh;
+        }
+    }
+    .divergent-img-slidein{
+        right: 0;
+        opacity: 1;
+        width: 100%;
+    }
+    .divergent-content-slidein{
+        left: 0;
+        opacity: 1;
+    }
+}
+
+/* 
+  ##Device = Desktops
+  ##Screen = 1281px to higher resolution desktops
+*/
+
+@media (min-width: 1281px) {
+  
+    .divergent-wrapper{
+        .divergent-img{
+            width: 50vw;
+            height: 100vh;
+            left: 0;
+            top: -100vh;
+            text-align: center;
+            border: none;
+        }
+        .divergent-content{
+            width: 50vw;
+            left: 50vw;
+            top: 100vh;
+            height: 100vh;
+            .content{
+                width: 100%;
+                height: 100vh;
+            }
+            .content::-webkit-scrollbar {
+                width: 5px;
+            }
+            .content::-webkit-scrollbar-track {
+                //-webkit-box-shadow: inset 0 0 6px rgba(0,0,0,0.3); 
+                background-color: #e7e7e7;
+                //border-radius: 10px;
+            }
+            .content::-webkit-scrollbar-thumb {
+                //border-radius: 10px;
+                //-webkit-box-shadow: inset 0 0 6px rgba(0,0,0,0.5);
+                background-color: #222;
+            }
+        }
+        .divergent-img-slidein{
+            top: 0;
+            opacity: 1;
+        }
+        .divergent-content-slidein{
+            top: 0;
+            opacity: 1;
+        }
+    }
+
+}
+
+/* 
+##Device = Laptops, Desktops
+##Screen = B/w 1025px to 1280px
+*/
+
+@media (min-width: 1025px) and (max-width: 1280px) {
+
+    .divergent-wrapper{
+        .divergent-img{
+            width: 50vw;
+            height: 100vh;
+            left: 0;
+            top: -100vh;
+            border-right: 1px solid rgba(0,0,0,.2);
+        }
+        .divergent-content{
+            width: 50vw;
+            left: 50vw;
+            top: 100vh;
+            height: 100vh;
+            .content{
+                width: 100%;
+                height: 100vh;
+            }
+        }
+        .divergent-img-slidein{
+            top: 0;
+            opacity: 1;
+        }
+        .divergent-content-slidein{
+            top: 0;
+            opacity: 1;
+        }
+    }
+
+}
+
+/* 
+##Device = Tablets, Ipads (portrait)
+##Screen = B/w 768px to 1024px
+*/
+
+@media (min-width: 768px) and (max-width: 1024px) {
+
+//CSS
+
+}
+
+/* 
+##Device = Tablets, Ipads (landscape)
+##Screen = B/w 768px to 1024px
+*/
+
+@media (min-width: 768px) and (max-width: 1024px) and (orientation: landscape) {
+
+//CSS
+
+}
+
+/* 
+##Device = Low Resolution Tablets, Mobiles (Landscape)
+##Screen = B/w 481px to 767px
+*/
+
+@media (min-width: 481px) and (max-width: 767px) {
+
+//CSS
+
+}
+
+/* 
+##Device = Most of the Smartphones Mobiles (Portrait)
+##Screen = B/w 320px to 479px
+*/
+
+@media (min-width: 320px) and (max-width: 480px) {
+
+//CSS
+
+}

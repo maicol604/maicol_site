@@ -1,0 +1,42 @@
+.laptop-wrapper{
+    width: 100%;
+    position: relative;
+    img{
+        position: relative;
+        width: 100%;
+        z-index: 5;
+        height: auto;
+        float: left;
+    }
+    .animate-screen{
+        transition: transform 2s;
+        transition-delay: .25s;
+        transform-origin: 100% 100%;
+        transform: rotateX(80deg);
+    }
+    .animate-screen-active{
+        transform: rotateX(0deg);
+    }
+    .coding{
+        position: absolute;
+        left: 13.4%;
+        width: 72.7%;
+        padding-top: 6%;
+        overflow: hidden;
+        opacity: 0;
+        transition: transform 2s, opacity 3s;
+        transition-delay: .25s;
+        transform-origin: 100% 100%;
+        transform: rotateX(80deg);
+        z-index: 10;
+        img{
+            width: 124%;
+            position: relative;
+            top: 10%;
+        }
+    }
+    .coding-active{
+        opacity: 1;
+        transform: rotateX(0deg);
+    }
+}

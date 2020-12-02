@@ -1,0 +1,47 @@
+.box{
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 10;
+    .percent{
+        display: inherit;
+        justify-content: center;
+        align-items: center;
+        svg{
+            position: relative;
+            width: 150px;
+            height: 150px;
+            circle{
+                width: 150px;
+                height: 150px;
+                fill: none;
+                stroke-width: 10;
+                stroke: #000;
+                transform: translate(5px, 5px);
+                stroke-dasharray: 440;
+                stroke-dashoffset: 440;
+            }
+            circle:nth-child(1){
+                stroke-dashoffset: 0;
+                stroke: #b9b9b9;
+            }
+            circle:nth-child(2){
+                stroke-dashoffset: calc(440 - (440 * 0) / 100);
+                stroke: #de3926;
+                transition: stroke-dashoffset 2.5s;
+                transition-delay: .5s;
+                transition-timing-function: ease-in-out;
+            }
+        }
+        .content{
+            font-size: 1.5em;
+            margin: 0;
+            padding: 0;
+            height: 100%;
+            width: fit-content;
+            display: flex;
+            align-items: center;
+        }
+    }
+}

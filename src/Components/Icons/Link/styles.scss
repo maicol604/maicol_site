@@ -1,0 +1,18 @@
+.animateicon-wrapper{
+    width: 3rem;
+    height: 3rem;
+    padding: 1rem;
+    box-sizing: border-box;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    background-color: #de3926;
+    overflow: hidden;
+    .animate-icon{
+        position: absolute;
+        width: 2rem !important;
+        filter: brightness(100) invert(1);
+        //transition: all .5s;
+    }
+}

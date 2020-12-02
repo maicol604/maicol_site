@@ -1,0 +1,32 @@
+.testimony-wrapper{
+    padding: 1em;
+    header{
+        display: flex;
+        justify-content: flex-start;
+        align-items: flex-start;
+        .avatar{
+            overflow: hidden;
+            height: 3em;
+            width: 3em;
+            margin-right: .5em;
+            img{
+                width: 100%;
+                height: auto;
+            }
+        }
+    }
+    .text{
+        display: block;
+        .quotation{
+            position: relative;
+            display: flex;
+            padding: .25em;
+            width: 1em;
+            height: 1em;
+            background-color: #de3926;
+            img{
+                filter: invert(1) brightness(10);
+            }
+        }
+    }
+}

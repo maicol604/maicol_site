@@ -1,0 +1,62 @@
+.resume-wrapper{
+    padding: 1em;
+    position: relative;
+    box-sizing: border-box;
+    h2{
+        position: relative;
+        margin-top: 0;
+    }
+    h2:after{
+        content: "";
+        display: inline-block;
+        height: 0.5em;
+        vertical-align: bottom;
+        width: 2em;
+        border-top: 2px solid #de3926;
+        position: absolute;
+        left: 0;
+        top: 1.25em;
+    }
+    h3{
+        width: 100%;
+    }
+    .experience-education-content{
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        box-sizing: border-box;
+        width: 100%;
+        section{
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            h2{
+                width: 100%;
+            }
+        }
+    }
+    .skills-content{
+        section{
+            display: flex;
+            align-items: center;
+            flex-direction: column;
+        }
+        .skill-coding{
+            display: flex;
+            flex-direction: column;
+            width: 100%;
+        }
+    }
+    .knowledge-content{
+        display: flex;
+        align-items: center;
+        flex-direction: column;
+        width: 100%;
+        .knowledges{
+            width: 100%;
+            display: flex;
+            align-items: center;
+            flex-direction: column;
+        }
+    }
+}

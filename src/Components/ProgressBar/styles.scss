@@ -1,0 +1,31 @@
+.progress-bar-wrapper{
+    display: flex;
+    width: 100%;
+    justify-content: space-between;
+    margin: .25em 0;
+    .bar-container{
+        background-color: #b9b9b9;
+        min-height: 1.5em;
+        width: 100%;
+        display: flex;
+        justify-content: flex-start;
+        align-items: center;
+        position: relative;
+        .bar{
+            position: absolute;
+            background-color: #de3926;
+            min-height: 100%;
+            transition: width 1.5s;
+            transition-delay: 0s;
+            transition-timing-function: ease-in-out;
+        }
+        .text{
+            color: #fff;
+            //position: absolute;
+            position: relative;
+            margin: .25em;
+            margin-left: 1em;
+            z-index: 1;
+        }
+    }
+}

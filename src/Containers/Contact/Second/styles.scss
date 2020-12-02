@@ -1,0 +1,48 @@
+.contact-wrapper{
+    padding: 1em;
+    h2{
+        margin-top: 0;
+        position: relative;
+    }
+    h2::after{
+        content: "";
+        display: inline-block;
+        height: 0.5em;
+        vertical-align: bottom;
+        width: 2em;
+        border-top: 2px solid #de3926;
+        position: absolute;
+        left: 0;
+        top: 1.25em;
+    }
+    .map-wrapper{
+        width: 100%;
+        height: 30vh;
+        overflow: hidden;
+    }
+    .social{
+        margin-top: 1em;
+        display: flex;
+        .icon{
+            width: 2em;
+            height: 2em;
+            box-sizing: border-box;
+            padding: .25em;
+            a{
+                filter: brightness(100) invert(1);
+            }
+        }
+        .icon:nth-child(n+1){
+            margin-right: .25em;
+        }
+        .wsp{
+            background-color: green;
+        }
+        .gm{
+            background-color: #F44336;
+        }
+    }
+}
+.leaflet-container{
+    height: 30vh !important;
+}

@@ -1,0 +1,76 @@
+.animate-BG{
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    position: sticky;
+    z-index: 1;
+    top: -10em;
+    left: -10em;
+    width: 100%;
+    height: 100vh;
+    background: #fff;
+    opacity: .5;
+    overflow: hidden;
+
+    .rectangle{
+        position: relative;
+        
+        width: 200%;
+        height: 70vh;
+        left: -50%;
+
+        background-color: #fff;
+        background-color: rgba(0,0,0,.025);
+        transition: transform 1s, background-color .5s;
+    }
+    .rectangle-active:nth-child(n){
+        transform: rotateZ(-25deg);
+
+        animation-name: bg-animate-n;
+        animation-duration: 30s;
+        animation-iteration-count: infinite;
+    }
+    .rectangle-active:nth-child(2n){
+        transform: rotateZ(15deg);
+        
+        animation-name: bg-animate-2n;
+        animation-duration: 20s;
+        animation-iteration-count: infinite;
+    }
+}
+
+@keyframes bg-animate-n {
+    0%   {
+        background-color: rgba(0,0,0,.1);
+        transform: rotateZ(-25deg);
+        left: -50%;
+    }
+    50%  {
+        background-color: rgba(0,0,0,.05);
+        transform: rotateZ(-45deg);
+        left: -80%;
+    }
+    100%   {
+        background-color: rgba(0,0,0,.1);
+        transform: rotateZ(-25deg);
+        left: -50%;
+    }
+}
+
+@keyframes bg-animate-2n {
+    0%   {
+        background-color: rgba(0,0,0,.1);
+        transform: rotateZ(15deg);
+        top: 10vh;
+    }
+    50%  {
+        background-color: rgba(0,0,0,.05);
+        transform: rotateZ(35deg);
+        top: 0
+    }
+    100%   {
+        background-color: rgba(0,0,0,.1);
+        transform: rotateZ(15deg);
+        top: 10vh;
+    }
+}

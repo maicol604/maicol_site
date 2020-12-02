@@ -1,0 +1,38 @@
+.contact-form-wrapper{
+    width: 100%;
+    margin: 1em 0;
+    form{
+        display: flex;
+        flex-direction: column;
+        font-family:inherit;
+        .form-control{
+            margin-bottom: .5em;
+            padding: .5em;
+            border: 1px solid #222;
+            font-family:inherit;
+            background-color: #fff;
+        }
+        .form-control:nth-child(3){
+            height: 10em;
+        }
+        input[type=text]:focus{
+            border: none;
+        }
+        .btn-submit{
+            color: #fff;
+            background-color: #de3926;
+            border: none;
+            padding: 1.5em 0;
+        }
+        .btn-submit:focus{
+            border: 1px solid red;
+        }
+    }
+    .alert{
+        width: 100%;
+        text-align: center;
+        padding-bottom: 1em;
+        font-weight: bold;
+        color: #de3926;
+    }
+}
