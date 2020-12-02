@@ -1,10 +1,11 @@
 import React from 'react';
+import './styles.scss';
 
-const First = (props) => {
+const ContactFirst = (props) => {
     return (
-        <div>
-            
+        <div className='contact-first-wrapper'>
+            <img className='BG' src={require('../../../img/maicol2.jpg')} alt='user' />
         </div>
     )
 }
-export default First;
+export default ContactFirst;

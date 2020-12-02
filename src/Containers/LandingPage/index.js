@@ -10,8 +10,10 @@ import ResumeFirst from '../Resume/First';
 import ResumeSecond from '../Resume/Second';
 
 import WorksSecond from '../Works/Second';
+import WorksFirst from '../Works/First';
 
 import ContactSecond from '../Contact/Second';
+import ContactFirst from '../Contact/First';
 
 import { useDrag } from 'react-use-gesture'
 
@@ -121,7 +123,7 @@ const LandingPage = (props) => {
                 />
                 <Divergent 
                     animate={state.active==='WORKS'}
-                    first={<h1>WORKS</h1>}
+                    first={<WorksFirst/>}
                     second={
                         <WorksSecond
                             active={state.active==='WORKS'}
@@ -130,7 +132,7 @@ const LandingPage = (props) => {
                 />
                 <Divergent 
                     animate={state.active==='CONTACT'}
-                    first={<h1>CONTACT</h1>}
+                    first={<ContactFirst/>}
                     second={
                         <ContactSecond
                             

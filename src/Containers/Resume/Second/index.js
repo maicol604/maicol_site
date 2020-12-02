@@ -45,19 +45,19 @@ const ResumeSecond = (props) => {
                     <Card
                         header={<React.Fragment><img src={require('../../../img/unet.png')} alt='UNET'/></React.Fragment>}
                         title='Computer engineering degree'
-                        text='Lorem ipsum dolor sit amet, consectetur adipiscing elit. Cras bibendum aliquet massa, ac rutrum urna vehicula vitae. Cras tristique iaculis velit, a rutrum erat mattis sed.'
+                        text='degree in computer engineering at the national experimental university of Táchira.'
                         style={{width:'100%'}}
                     />
                     <Card
                         header={<React.Fragment><img src={require('../../../img/react.png')} alt='udemy'/></React.Fragment>}
                         title='React JS Udemy certificate'
-                        text='Lorem ipsum dolor sit amet, consectetur adipiscing elit. Cras bibendum aliquet massa, ac rutrum urna vehicula vitae. Cras tristique iaculis velit, a rutrum erat mattis sed.'
+                        text=''
                         style={{width:'100%'}}
                     />
                     <Card
                         header={<React.Fragment><img src={require('../../../img/flutter.png')} alt='udemy'/></React.Fragment>}
                         title='Flutter Udemy certificate'
-                        text='Lorem ipsum dolor sit amet, consectetur adipiscing elit. Cras bibendum aliquet massa, ac rutrum urna vehicula vitae. Cras tristique iaculis velit, a rutrum erat mattis sed.'
+                        text=''
                         style={{width:'100%'}}
                     />
                 </section>
@@ -65,15 +65,15 @@ const ResumeSecond = (props) => {
                     <h2><span ref={experienceRef}/>Experience</h2>
                     <div>
                         <h3>Front-end Developer</h3>
-                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Cras bibendum aliquet massa, ac rutrum urna vehicula vitae. Cras tristique iaculis velit, a rutrum erat mattis sed.</p>
+                        <p>About two years of experience as a frontend developer in react js, with extensive knowledge in javascript, css, typescript and html. also development of plugins for wordpress and correction and detection of php and layout errors.</p>
                     </div>
                     <div>
                         <h3>Back-end Developer</h3>
-                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Cras bibendum aliquet massa, ac rutrum urna vehicula vitae. Cras tristique iaculis velit, a rutrum erat mattis sed. Aliquam convallis ex nisi, sed iaculis urna cursus nec. Sed suscipit purus quis rutrum pulvinar. Sed eget dui porta, facilisis magna et, hendrerit ipsum.</p>
+                        <p>Development of apis for wordpress and use of nodeJS api to manage audio streams, basic knowledge of creating endpoints with nodeJS and express.</p>
                     </div>
                     <div>
                         <h3>Data Base Modeling</h3>
-                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Cras bibendum aliquet massa, ac rutrum urna vehicula vitae. Cras tristique iaculis velit, a rutrum erat mattis sed.</p>
+                        <p>Database modeling with entity, relationship models, and schemas for json NoSQL collections</p>
                     </div>
                 </section>
             </div>
@@ -137,6 +137,25 @@ const ResumeSecond = (props) => {
                         />
                     </span>
                 </section>
+                
+                <section>
+                    <h3>Interesting technologies</h3>
+                    <span className='skill-coding'>
+                        <ProgressBar
+                            percent={props.active?80:0}
+                            text='Twilio'
+                        />
+                        <ProgressBar
+                            percent={props.active?60:0}
+                            text='Google Maps API'
+                        />
+                        <ProgressBar
+                            percent={props.active?70:0}
+                            text='Wordpress API'
+                        />
+                    </span>
+                </section>
+
             </div>  
         </div>
     )

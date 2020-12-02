@@ -46,25 +46,19 @@ const WorksSecond = (props) => {
                             <AnimateLink/>
                         </a>
                         <img src={require('../../../img/works/clandidate-min.png')} alt=''/>
-                    </article>{/* 
+                    </article>
                     <article>
                         <a href='https://dnatestinginsandiego.com/' target="_blank">
                             <AnimateLink/>
                         </a>
-                        <img src={require('../../../img/works/sandiego.png')} alt=''/>
+                        <img src={require('../../../img/works/sandiego-min.jpg')} alt=''/>
                     </article>
                     <article>
                         <a href='https://dnatestingphiladelphia.com/' target="_blank">
                             <AnimateLink/>
                         </a>
-                        <img src={require('../../../img/works/philadelphia.png')} alt=''/>
+                        <img src={require('../../../img/works/philadelphi-min.jpg')} alt=''/>
                     </article>
-                    <article>
-                        <a href='https://dnatestingdetroit.com/' target="_blank">
-                            <AnimateLink/>
-                        </a>
-                        <img src={require('../../../img/works/detroit.png')} alt=''/>
-                    </article>*/}
                 </section>
             </span>
         </div>
