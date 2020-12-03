@@ -153,6 +153,14 @@ const ResumeSecond = (props) => {
                             percent={props.active?70:0}
                             text='Wordpress API'
                         />
+                        <ProgressBar
+                            percent={props.active?50:0}
+                            text='Google Cloud Translation'
+                        />
+                        <ProgressBar
+                            percent={props.active?40:0}
+                            text='Microsoft - Azure Cognitive Services'
+                        />
                     </span>
                 </section>
 
