@@ -4,7 +4,7 @@ import './styles.scss';
 const ContactFirst = (props) => {
     return (
         <div className='contact-first-wrapper'>
-            <img className='BG' src={require('../../../img/maicol2.jpg')} alt='user' />
+            <img className='BG' src={require('../../../img/maicol2-min.jpg')} alt='user' />
         </div>
     )
 }

@@ -4,7 +4,7 @@ import './styles.scss';
 const WorksFirst = (props) => {
     return (
         <div className='works-first-wrapper'>
-            <img className='BG' src={require('../../../img/maicol3.jpg')} alt='user' />
+            <img className='BG' src={require('../../../img/maicol3-min.jpg')} alt='user' />
         </div>
     )
 }

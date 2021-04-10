@@ -60,6 +60,12 @@ const ResumeSecond = (props) => {
                         text=''
                         style={{width:'100%'}}
                     />
+                    <Card
+                        header={<React.Fragment><img style={{filter: 'initial'}} src={require('../../../img/css-3.png')} alt='udemy'/></React.Fragment>}
+                        title='CSS Udemy certificate'
+                        text=''
+                        style={{width:'100%'}}
+                    />
                 </section>
                 <section>
                     <h2><span ref={experienceRef}/>Experience</h2>
