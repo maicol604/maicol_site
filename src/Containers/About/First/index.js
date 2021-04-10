@@ -2,6 +2,8 @@ import React from 'react';
 import './styles.scss';
 import lottie from 'lottie-web';
 
+import image from '../../../img/maicol-main-min.png';
+
 export default class AboutFirst extends React.Component {
 
     constructor(props){
@@ -26,7 +28,7 @@ export default class AboutFirst extends React.Component {
     render(){
         return (
             <div className='about-first-container'>
-                <img className='BG' src={require('../../../img/maicol-main-min.png')} alt='user' />
+                <img className='BG' src={image} alt='user' />
                 <div ref={this.setlottieGearRef}></div>
                 <span className='text'>
                     <div className={'name '+(this.props.active?'name-active':'')}>{this.props.name}</div>
