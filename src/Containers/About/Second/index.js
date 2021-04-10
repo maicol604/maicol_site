@@ -5,12 +5,6 @@ import lottie from 'lottie-web';
 import Card from '../../../Components/Card';
 import Testimony from '../../../Components/Testimony';
 
-import nelumbo from '../../../img/LogoNelumbo-min.png';
-import wwtc from '../../../img/wwtc-min.png';
-
-import angel from '../../../img/angel-min.jpg';
-import jose from '../../../img/jose-min.jpg';
-
 export default class AboutSecond extends React.Component {
 
     state={
@@ -75,12 +69,12 @@ export default class AboutSecond extends React.Component {
             {
                 name:'Angel de Freitas',
                 description:'Maicol did a great job to meet our DevOps needs. I appreciate extra efforts made by him to understand the problems and doing the necessary development or debugging keeping the urgency in mind. Looking forward to working together in the future over the next projects.',
-                src:angel
+                src:'img/angel-min.jpg'
             },
             {
                 name:'Jose Ochoa',
                 description:'One of the best professionals. Great back-end and sysadmin capabilities. Very attentive and dedicated to his work. Highly recommended',
-                src:jose
+                src:'img/jose-min.jpg'
             }
         ];
 
@@ -185,7 +179,7 @@ export default class AboutSecond extends React.Component {
                         </div>
                         <span className='pricing'>
                             <h3>Pricing</h3>
-                            <span className='price'>$15.00 / hr</span>
+                            <span className='price'>$9.00 / hr</span>
                             {/*<Card
                                 style={{width:'100%'}}
                                 header={<React.Fragment><span ref={this.setMoneyRef}/></React.Fragment>}
@@ -196,8 +190,8 @@ export default class AboutSecond extends React.Component {
                         <span className='clients'>
                             <h3>Clients</h3>
                             <span className='clients-logos-container'>
-                                <span className='client'><img src={nelumbo} alt=''/></span>
-                                <span className='client'><img src={wwtc} alt=''/></span>
+                                <span className='client'><img src={require('../../../img/LogoNelumbo-min.png')} alt=''/></span>
+                                <span className='client'><img src={require('../../../img/wwtc-min.png')} alt=''/></span>
                                 <span className='client'>Resultados Marketing Sectoriales, S.L.</span>
                             </span>
                         </span>
@@ -211,7 +205,7 @@ export default class AboutSecond extends React.Component {
                                                 key={index}
                                                 name={data.name}
                                                 text={data.description}
-                                                avatar={<img src={data.src} alt=''/>}
+                                                avatar={<img src={require('../../../'+data.src)} alt=''/>}
                                             />
                                         )
                                     })

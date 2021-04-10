@@ -1,6 +1,6 @@
 import React, { useEffect, useRef } from 'react';
 import './styles.scss';
-import { MapContainer, TileLayer, Marker, Popup } from 'react-leaflet';
+import { Map, TileLayer, Marker, Popup } from 'react-leaflet';
 import Form from '../../../Components/ContactForm';
 import lottie from 'lottie-web';
 
@@ -37,7 +37,7 @@ const ContactSecond = (props) => {
         <div className='contact-wrapper'>
             <h2>Contact Me</h2>
             <div className='map-wrapper'>
-                <MapContainer center={position} zoom={10}>
+                <Map center={position} zoom={10}>
                     <TileLayer
                     attribution='&amp;copy <a href="http://osm.org/copyright">OpenStreetMap</a> contributors'
                     url="https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png"
@@ -47,7 +47,7 @@ const ContactSecond = (props) => {
                         Here I am!
                     </Popup>
                     </Marker>
-                </MapContainer>
+                </Map>
             </div>
             <div className='social'>
                <div className='icon wsp'>

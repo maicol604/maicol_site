@@ -5,10 +5,6 @@ import ProgressBar from '../../../Components/ProgressBar';
 
 import lottie from 'lottie-web';
 
-import unet from '../../../img/unet.png';
-import reacticon from '../../../img/react.png';
-import flutter from '../../../img/flutter.png';
-import css from '../../../img/css-3.png';
 
 const ResumeSecond = (props) => {
     let experienceRef = useRef(null);
@@ -47,25 +43,25 @@ const ResumeSecond = (props) => {
                 <section>
                     <h2>Education</h2>
                     <Card
-                        header={<React.Fragment><img src={unet} alt='UNET'/></React.Fragment>}
+                        header={<React.Fragment><img src={require('../../../img/unet.png')} alt='UNET'/></React.Fragment>}
                         title='Computer engineering degree'
                         text='degree in computer engineering at the national experimental university of Táchira.'
                         style={{width:'100%'}}
                     />
                     <Card
-                        header={<React.Fragment><img src={reacticon} alt='udemy'/></React.Fragment>}
+                        header={<React.Fragment><img src={require('../../../img/react.png')} alt='udemy'/></React.Fragment>}
                         title='React JS Udemy certificate'
                         text=''
                         style={{width:'100%'}}
                     />
                     <Card
-                        header={<React.Fragment><img src={flutter} alt='udemy'/></React.Fragment>}
+                        header={<React.Fragment><img src={require('../../../img/flutter.png')} alt='udemy'/></React.Fragment>}
                         title='Flutter Udemy certificate'
                         text=''
                         style={{width:'100%'}}
                     />
                     <Card
-                        header={<React.Fragment><img style={{filter: 'initial'}} src={css} alt='udemy'/></React.Fragment>}
+                        header={<React.Fragment><img style={{filter: 'initial'}} src={require('../../../img/css-3.png')} alt='udemy'/></React.Fragment>}
                         title='CSS Udemy certificate'
                         text=''
                         style={{width:'100%'}}
