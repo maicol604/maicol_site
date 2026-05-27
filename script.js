@@ -1,4 +1,33 @@
 /* ============================================
+   THEME / DARK MODE
+   ============================================ */
+
+function initTheme() {
+  const saved = localStorage.getItem('portfolio-theme');
+  const theme = saved || 'light';
+  setTheme(theme, false);
+
+  document.getElementById('theme-toggle')?.addEventListener('click', () => toggleTheme());
+  document.getElementById('mobile-theme-toggle')?.addEventListener('click', () => toggleTheme());
+}
+
+function toggleTheme() {
+  const current = document.documentElement.getAttribute('data-theme');
+  const next = current === 'dark' ? 'light' : 'dark';
+  setTheme(next, true);
+}
+
+function setTheme(theme, save) {
+  document.documentElement.setAttribute('data-theme', theme);
+  document.querySelectorAll('.theme-toggle').forEach(btn => {
+    btn.setAttribute('data-theme', theme);
+  });
+  if (save) {
+    localStorage.setItem('portfolio-theme', theme);
+  }
+}
+
+/* ============================================
    NAVIGATION
    ============================================ */
 const nav = document.getElementById('nav');
@@ -169,8 +198,10 @@ function initTypingEffect() {
 }
 
 /* ============================================
-   INITIALIZATION (waits for i18n)
+   INITIALIZATION
    ============================================ */
+initTheme();
+
 document.addEventListener('i18n-ready', () => {
   // Re-observe reveal elements after i18n has updated content
   document.querySelectorAll('.reveal:not(.visible)').forEach(el => {

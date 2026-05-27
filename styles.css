@@ -7,6 +7,14 @@
   box-sizing: border-box;
 }
 
+/* Smooth theme transitions */
+body, .nav, .nav.scrolled, .mobile-menu, .section, .section-alt,
+.project-card, .skill-category, .contact-form-wrapper,
+.contact-method, .timeline-content, .btn-secondary,
+.form-input, .form-textarea, .theme-toggle, .lang-btn {
+  transition: background-color 0.3s ease, color 0.3s ease, border-color 0.3s ease, box-shadow 0.3s ease;
+}
+
 :root {
   --bg: #fafafa;
   --bg-alt: #f3f4f6;
@@ -31,6 +39,46 @@
   --container: 1200px;
 }
 
+[data-theme="dark"] {
+  --bg: #0a0a0a;
+  --bg-alt: #111111;
+  --surface: #141414;
+  --text: #f5f5f5;
+  --text-secondary: #a1a1aa;
+  --text-muted: #71717a;
+  --accent: #3b82f6;
+  --accent-hover: #60a5fa;
+  --accent-gis: #10b981;
+  --accent-ai: #a78bfa;
+  --accent-traffic: #f87171;
+  --border: #27272a;
+  --border-light: #1c1c1c;
+  --shadow-sm: 0 1px 2px 0 rgb(0 0 0 / 0.3);
+  --shadow: 0 4px 6px -1px rgb(0 0 0 / 0.4), 0 2px 4px -2px rgb(0 0 0 / 0.4);
+  --shadow-lg: 0 10px 15px -3px rgb(0 0 0 / 0.5), 0 4px 6px -4px rgb(0 0 0 / 0.5);
+}
+
+@media (prefers-color-scheme: dark) {
+  :root:not([data-theme="light"]) {
+    --bg: #0a0a0a;
+    --bg-alt: #111111;
+    --surface: #141414;
+    --text: #f5f5f5;
+    --text-secondary: #a1a1aa;
+    --text-muted: #71717a;
+    --accent: #3b82f6;
+    --accent-hover: #60a5fa;
+    --accent-gis: #10b981;
+    --accent-ai: #a78bfa;
+    --accent-traffic: #f87171;
+    --border: #27272a;
+    --border-light: #1c1c1c;
+    --shadow-sm: 0 1px 2px 0 rgb(0 0 0 / 0.3);
+    --shadow: 0 4px 6px -1px rgb(0 0 0 / 0.4), 0 2px 4px -2px rgb(0 0 0 / 0.4);
+    --shadow-lg: 0 10px 15px -3px rgb(0 0 0 / 0.5), 0 4px 6px -4px rgb(0 0 0 / 0.5);
+  }
+}
+
 html {
   scroll-behavior: smooth;
   font-size: 16px;
@@ -44,6 +92,7 @@ body {
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   overflow-x: hidden;
+  transition: background-color 0.3s ease, color 0.3s ease;
 }
 
 a {
@@ -285,6 +334,60 @@ ul {
   font-size: 0.75rem;
   color: var(--border);
   font-weight: 400;
+}
+
+/* Theme Toggle */
+.theme-toggle {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 36px;
+  height: 36px;
+  background: var(--bg-alt);
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+  color: var(--text-secondary);
+  cursor: pointer;
+  transition: var(--transition);
+}
+
+.theme-toggle:hover {
+  border-color: var(--accent);
+  color: var(--accent);
+}
+
+.theme-icon-sun,
+.theme-icon-moon {
+  position: absolute;
+  transition: var(--transition);
+}
+
+.theme-icon-sun {
+  opacity: 1;
+  transform: rotate(0deg) scale(1);
+}
+
+.theme-icon-moon {
+  opacity: 0;
+  transform: rotate(90deg) scale(0.5);
+}
+
+[data-theme="dark"] .theme-icon-sun,
+.theme-toggle[data-theme="dark"] .theme-icon-sun {
+  opacity: 0;
+  transform: rotate(-90deg) scale(0.5);
+}
+
+[data-theme="dark"] .theme-icon-moon,
+.theme-toggle[data-theme="dark"] .theme-icon-moon {
+  opacity: 1;
+  transform: rotate(0deg) scale(1);
+}
+
+.mobile-theme-toggle {
+  width: 44px;
+  height: 44px;
+  margin: 1rem 0;
 }
 
 /* Mobile Language Selector */
@@ -571,24 +674,6 @@ ul {
   gap: 3rem;
   align-items: center;
   justify-items: center;
-}
-
-.about-image-wrapper {
-  position: relative;
-}
-
-.about-image {
-  width: 100%;
-  max-width: 400px;
-  aspect-ratio: 4/5;
-  object-fit: cover;
-  border-radius: var(--radius-lg);
-  filter: grayscale(30%);
-  transition: filter 0.5s ease;
-}
-
-.about-image-wrapper:hover .about-image {
-  filter: grayscale(0%);
 }
 
 .about-content {
@@ -980,31 +1065,6 @@ ul {
   font-size: 0.9375rem;
   font-weight: 600;
   color: var(--text);
-}
-
-.contact-socials {
-  display: flex;
-  gap: 0.75rem;
-  margin-top: 0.5rem;
-}
-
-.contact-social {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  width: 44px;
-  height: 44px;
-  background: var(--surface);
-  border: 1px solid var(--border-light);
-  border-radius: var(--radius);
-  color: var(--text-secondary);
-  transition: var(--transition);
-}
-
-.contact-social:hover {
-  border-color: var(--accent);
-  color: var(--accent);
-  transform: translateY(-2px);
 }
 
 /* Contact Form */
