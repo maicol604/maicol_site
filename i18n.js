@@ -31,7 +31,7 @@ const translations = {
     about_title_2: 'maps',
     about_title_3: ' & ',
     about_title_4: 'intelligence',
-    about_p1_combined: "I'm a Software Engineer specializing in <strong>geospatial systems</strong>, <strong>intelligent traffic platforms</strong>, and <strong>AI-driven applications</strong>. I've contributed to <strong>European traffic management projects</strong>, building GIS solutions that process real-time spatial data at scale — from map-based dashboards to pipeline integrations with live traffic feeds.",
+    about_p1_combined: "I'm a Software Engineer specializing in <strong>geospatial systems</strong>, <strong>intelligent traffic platforms</strong>, and <strong>AI-driven applications</strong>. I've built GIS solutions for <strong>urban transportation projects across Europe</strong> — developing smart city applications that improve people's daily lives and transform how communities interact with public transit. From real-time traffic dashboards to predictive routing systems, I turn spatial data into tools that make cities move better.",
     about_p2_combined: "Currently, I'm deep in the <strong>AI ecosystem</strong> — designing agentic workflows, integrating LLMs into production systems, and building autonomous agents that reason, plan, and execute. Every line of code I write is kept <strong>clean, testable, and scalable</strong>.",
     badge_gis: 'GIS',
     badge_ai: 'AI Agents',
@@ -101,7 +101,7 @@ const translations = {
 
     // Footer
     footer_tagline: 'Software Engineer · GIS · AI',
-    footer_built: 'Built with vanilla HTML, CSS & JS',
+    footer_built: 'Engineered with stubborn curiosity & clean code ☕',
 
     // Lang selector
     lang_en: 'EN',
@@ -136,7 +136,7 @@ const translations = {
     about_title_2: 'mapas',
     about_title_3: ' y la ',
     about_title_4: 'inteligencia',
-    about_p1_combined: 'Soy un Ingeniero de Software especializado en <strong>sistemas geoespaciales</strong>, <strong>plataformas inteligentes de tráfico</strong> y <strong>aplicaciones impulsadas por IA</strong>. He contribuido en <strong>proyectos europeos de gestión de tráfico</strong>, construyendo soluciones GIS que procesan datos espaciales en tiempo real a escala — desde dashboards basados en mapas hasta integraciones de pipelines con feeds de tráfico en vivo.',
+    about_p1_combined: 'Soy un Ingeniero de Software especializado en <strong>sistemas geoespaciales</strong>, <strong>plataformas inteligentes de tráfico</strong> y <strong>aplicaciones impulsadas por IA</strong>. He desarrollado soluciones GIS para <strong>proyectos de transporte urbano en Europa</strong> — creando aplicaciones para ciudades inteligentes que mejoran la vida diaria de las personas y transforman cómo las comunidades interactúan con el transporte público. Desde dashboards de tráfico en tiempo real hasta sistemas de enrutamiento predictivo, convierto datos espaciales en herramientas que hacen que las ciudades fluyan mejor.',
     about_p2_combined: 'Actualmente, estoy inmerso en el <strong>ecosistema de IA</strong> — diseñando flujos de trabajo agenticos, integrando LLMs en sistemas de producción y construyendo agentes autónomos que razonan, planifican y ejecutan. Cada línea de código que escribo se mantiene <strong>limpia, testeable y escalable</strong>.',
     badge_gis: 'GIS',
     badge_ai: 'Agentes IA',
@@ -206,7 +206,7 @@ const translations = {
 
     // Footer
     footer_tagline: 'Ingeniero de Software · GIS · IA',
-    footer_built: 'Construido con HTML, CSS y JS vanilla',
+    footer_built: 'Ingeniería con terquedad, café y código limpio ☕',
 
     // Lang selector
     lang_en: 'EN',

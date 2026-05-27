@@ -1156,6 +1156,30 @@ ul {
   color: var(--text-muted);
 }
 
+.footer-center {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.footer-link {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  font-size: 0.875rem;
+  font-weight: 500;
+  color: var(--text-secondary);
+  transition: var(--transition);
+}
+
+.footer-link:hover {
+  color: var(--accent);
+}
+
+.footer-link svg {
+  flex-shrink: 0;
+}
+
 .footer-right {
   display: flex;
   flex-direction: column;
