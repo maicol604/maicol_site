@@ -85,6 +85,7 @@ const translations = {
     skill_backend: 'Backend',
     skill_data: 'Data',
     skill_devops: 'DevOps & Tools',
+    skill_mobile: 'Mobile Development',
 
     // Contact
     contact_eyebrow: 'Get in Touch',
@@ -192,6 +193,7 @@ const translations = {
     skill_backend: 'Backend',
     skill_data: 'Datos',
     skill_devops: 'DevOps y Herramientas',
+    skill_mobile: 'Desarrollo Móvil',
 
     // Contact
     contact_eyebrow: 'Contacto',
