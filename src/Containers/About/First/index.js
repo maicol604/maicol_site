@@ -2,7 +2,7 @@ import React from 'react';
 import './styles.scss';
 import lottie from 'lottie-web';
 
-import image from '../../../img/maicol-main-min.png';
+import image from '../../../img/maicol.png';
 
 export default class AboutFirst extends React.Component {
 

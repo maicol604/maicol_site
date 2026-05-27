@@ -2,7 +2,7 @@ import React from 'react';
 
 import './styles.scss';
 
-import image from '../../img/maicol-main-min.jpg';
+import image from '../../img/maicol.png';
 
 const MainImgUser = (props) => {
     return (

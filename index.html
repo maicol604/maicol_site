@@ -1,0 +1,914 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Maicol Fariño — Software Engineer · GIS · AI</title>
+  <meta name="description" content="Software Engineer specializing in geospatial systems, intelligent traffic platforms, and AI-driven applications. European projects experience.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css">
+  <link rel="icon" type="image/x-icon" href="public/favicon.ico">
+</head>
+<body>
+  <!-- Navigation -->
+  <nav class="nav" id="nav">
+    <div class="nav-container">
+      <a href="#" class="nav-logo">MF</a>
+      <ul class="nav-links" id="nav-links">
+        <li><a href="#about" class="nav-link" data-i18n="nav_about">About</a></li>
+        <li><a href="#experience" class="nav-link" data-i18n="nav_experience">Experience</a></li>
+        <li><a href="#projects" class="nav-link" data-i18n="nav_projects">Projects</a></li>
+        <li><a href="#skills" class="nav-link" data-i18n="nav_skills">Skills</a></li>
+        <li><a href="#contact" class="nav-link" data-i18n="nav_contact">Contact</a></li>
+      </ul>
+      <div class="nav-right">
+        <div class="lang-selector">
+          <button class="lang-btn" data-lang="en" aria-label="English">EN</button>
+          <span class="lang-divider">/</span>
+          <button class="lang-btn" data-lang="es" aria-label="Español">ES</button>
+        </div>
+        <a href="mailto:maicol.fario@gmail.com" class="nav-cta" data-i18n="nav_cta">Let's Talk</a>
+      </div>
+      <button class="nav-toggle" id="nav-toggle" aria-label="Toggle menu">
+        <span></span>
+        <span></span>
+      </button>
+    </div>
+  </nav>
+
+  <!-- Mobile Menu -->
+  <div class="mobile-menu" id="mobile-menu">
+    <ul class="mobile-menu-links">
+      <li><a href="#about" class="mobile-menu-link" data-i18n="nav_about">About</a></li>
+      <li><a href="#experience" class="mobile-menu-link" data-i18n="nav_experience">Experience</a></li>
+      <li><a href="#projects" class="mobile-menu-link" data-i18n="nav_projects">Projects</a></li>
+      <li><a href="#skills" class="mobile-menu-link" data-i18n="nav_skills">Skills</a></li>
+      <li><a href="#contact" class="mobile-menu-link" data-i18n="nav_contact">Contact</a></li>
+    </ul>
+    <div class="mobile-lang-selector">
+      <button class="lang-btn" data-lang="en" aria-label="English">EN</button>
+      <span class="lang-divider">/</span>
+      <button class="lang-btn" data-lang="es" aria-label="Español">ES</button>
+    </div>
+    <a href="mailto:maicol.fario@gmail.com" class="mobile-menu-cta" data-i18n="nav_cta">Let's Talk</a>
+  </div>
+
+  <!-- Hero Section -->
+  <section class="hero" id="hero">
+    <div class="hero-container">
+      <div class="hero-content">
+        <div class="hero-badge"><span data-i18n="hero_badge">Available for work</span></div>
+        <h1 class="hero-title">
+          <span class="hero-title-line" data-i18n="hero_title_1">Maicol</span>
+          <span class="hero-title-line" data-i18n="hero_title_2">Fariño</span>
+        </h1>
+        <p class="hero-subtitle" data-i18n="hero_subtitle">
+          Software Engineer · GIS & Traffic Systems · AI Agents
+        </p>
+        <p class="hero-description" data-i18n="hero_desc">
+          Building scalable solutions at the intersection of geospatial data, 
+          traffic intelligence, and autonomous AI. I design clean, testable systems 
+          that solve real-world problems.
+        </p>
+        <div class="hero-actions">
+          <a href="#projects" class="btn btn-primary" data-i18n="hero_cta_primary">View Projects</a>
+          <a href="#contact" class="btn btn-secondary" data-i18n="hero_cta_secondary">Get in Touch</a>
+        </div>
+      </div>
+      <div class="hero-visual">
+        <div class="hero-image-wrapper">
+          <img src="assets/maicol.png" alt="Maicol Fariño — Software Engineer" class="hero-image">
+          <div class="hero-image-accent"></div>
+        </div>
+        <div class="hero-stats">
+          <div class="hero-stat">
+            <span class="hero-stat-value">7+</span>
+            <span class="hero-stat-label" data-i18n="hero_stat_years">Years Experience</span>
+          </div>
+          <div class="hero-stat">
+            <span class="hero-stat-value">20+</span>
+            <span class="hero-stat-label" data-i18n="hero_stat_projects">Projects Delivered</span>
+          </div>
+          <div class="hero-stat">
+            <span class="hero-stat-value">EU</span>
+            <span class="hero-stat-label" data-i18n="hero_stat_eu">Traffic Projects</span>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="hero-scroll">
+      <span data-i18n="hero_scroll">Scroll to explore</span>
+      <div class="hero-scroll-line"></div>
+    </div>
+  </section>
+
+  <!-- About Section -->
+  <section class="about section" id="about">
+    <div class="container">
+      <div class="about-grid">
+        <div class="about-content reveal">
+          <span class="section-eyebrow" data-i18n="about_eyebrow">About Me</span>
+          <h2 class="section-title">
+            <span data-i18n="about_title_1">Engineering at the edge of </span>
+            <span class="text-accent" data-i18n="about_title_2">maps</span>
+            <span data-i18n="about_title_3"> & </span>
+            <span class="text-accent" data-i18n="about_title_4">intelligence</span>
+          </h2>
+          <div class="about-text">
+            <p data-i18n-html="about_p1_combined">
+              I'm a Software Engineer specializing in <strong>geospatial systems</strong>, 
+              <strong>intelligent traffic platforms</strong>, and <strong>AI-driven applications</strong>. 
+              I've contributed to <strong>European traffic management projects</strong>, building 
+              GIS solutions that process real-time spatial data at scale — from map-based 
+              dashboards to pipeline integrations with live traffic feeds.
+            </p>
+            <p data-i18n-html="about_p2_combined">
+              Currently, I'm deep in the <strong>AI ecosystem</strong> — designing agentic workflows, 
+              integrating LLMs into production systems, and building autonomous agents that 
+              reason, plan, and execute. Every line of code I write is kept <strong>clean, 
+              testable, and scalable</strong>.
+            </p>
+          </div>
+          <div class="about-badges">
+            <span class="badge badge-gis" data-i18n="badge_gis">GIS</span>
+            <span class="badge badge-ai" data-i18n="badge_ai">AI Agents</span>
+            <span class="badge badge-traffic" data-i18n="badge_traffic">Traffic Systems</span>
+            <span class="badge badge-fullstack" data-i18n="badge_fullstack">Full Stack</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Experience Section -->
+    <!-- Experience Section -->
+  <section class="experience section section-alt" id="experience">
+    <div class="container">
+      <div class="section-header reveal">
+        <span class="section-eyebrow" data-i18n="exp_eyebrow">Experience</span>
+        <h2 class="section-title">
+          <span data-i18n="exp_title_1">Where I've made an </span>
+          <span class="text-accent" data-i18n="exp_title_2">impact</span>
+        </h2>
+      </div>
+      <div class="timeline">
+        <div class="timeline-item reveal">
+          <div class="timeline-marker">
+            <div class="timeline-dot"></div>
+            <div class="timeline-line"></div>
+          </div>
+          <div class="timeline-content">
+            <div class="timeline-header">
+              <h3 class="timeline-role" data-i18n="exp_role_1">Senior Frontend Developer</h3>
+              <span class="timeline-period" data-i18n="exp_period_1">2022 — 2023</span>
+            </div>
+            <p class="timeline-company" data-i18n="exp_company_1">Overgroup</p>
+            <p class="timeline-description" data-i18n="exp_desc_1">
+              Led frontend development for enterprise web applications using React and modern JavaScript. 
+              Implemented responsive UI components, optimized performance, and collaborated with design 
+              teams to deliver pixel-perfect interfaces.
+            </p>
+            <div class="timeline-tags">
+              <span class="tag">React</span>
+              <span class="tag">JavaScript</span>
+              <span class="tag">UI/UX</span>
+            </div>
+          </div>
+        </div>
+        <div class="timeline-item reveal">
+          <div class="timeline-marker">
+            <div class="timeline-dot"></div>
+            <div class="timeline-line"></div>
+          </div>
+          <div class="timeline-content">
+            <div class="timeline-header">
+              <h3 class="timeline-role" data-i18n="exp_role_2">Software Engineer — GIS & Traffic</h3>
+              <span class="timeline-period" data-i18n="exp_period_2">2022 — Present</span>
+            </div>
+            <p class="timeline-company" data-i18n="exp_company_2">European Infrastructure Projects</p>
+            <p class="timeline-description" data-i18n="exp_desc_2">
+              Developed geospatial processing pipelines and real-time traffic visualization 
+              systems for European infrastructure projects. Built map-based dashboards 
+              integrating GIS data with live traffic feeds, spatial analytics, and 
+              predictive routing algorithms.
+            </p>
+            <div class="timeline-tags">
+              <span class="tag">GIS</span>
+              <span class="tag">Leaflet</span>
+              <span class="tag">PostGIS</span>
+              <span class="tag">Real-time Data</span>
+              <span class="tag">Traffic APIs</span>
+            </div>
+          </div>
+        </div>
+        <div class="timeline-item reveal">
+          <div class="timeline-marker">
+            <div class="timeline-dot"></div>
+            <div class="timeline-line"></div>
+          </div>
+          <div class="timeline-content">
+            <div class="timeline-header">
+              <h3 class="timeline-role" data-i18n="exp_role_3">Backend Developer</h3>
+              <span class="timeline-period" data-i18n="exp_period_3">2021 — 2022</span>
+            </div>
+            <p class="timeline-company" data-i18n="exp_company_3">Freelance & Remote</p>
+            <p class="timeline-description" data-i18n="exp_desc_3">
+              Delivered end-to-end web applications for clients across Europe and the Americas. 
+              Specialized in RESTful API design, database modeling, server architecture, 
+              and WordPress custom integrations.
+            </p>
+            <div class="timeline-tags">
+              <span class="tag">Node.js</span>
+              <span class="tag">PHP</span>
+              <span class="tag">REST APIs</span>
+              <span class="tag">WordPress</span>
+            </div>
+          </div>
+        </div>
+        <div class="timeline-item reveal">
+          <div class="timeline-marker">
+            <div class="timeline-dot"></div>
+            <div class="timeline-line"></div>
+          </div>
+          <div class="timeline-content">
+            <div class="timeline-header">
+              <h3 class="timeline-role" data-i18n="exp_role_4">UI/UX Designer & Senior Frontend Developer</h3>
+              <span class="timeline-period" data-i18n="exp_period_4">2021 — 2022</span>
+            </div>
+            <p class="timeline-company" data-i18n="exp_company_4">4to Ángulo & Motivarnos</p>
+            <p class="timeline-description" data-i18n="exp_desc_4">
+              Designed and developed responsive web platforms from concept to deployment. 
+              Created UI/UX wireframes and prototypes, then built performant frontend 
+              architectures with React and modern CSS.
+            </p>
+            <div class="timeline-tags">
+              <span class="tag">React</span>
+              <span class="tag">UI/UX</span>
+              <span class="tag">Figma</span>
+              <span class="tag">CSS</span>
+            </div>
+          </div>
+        </div>
+        <div class="timeline-item reveal">
+          <div class="timeline-marker">
+            <div class="timeline-dot"></div>
+            <div class="timeline-line"></div>
+          </div>
+          <div class="timeline-content">
+            <div class="timeline-header">
+              <h3 class="timeline-role" data-i18n="exp_role_5">Junior Frontend Developer</h3>
+              <span class="timeline-period" data-i18n="exp_period_5">2017 — 2020</span>
+            </div>
+            <p class="timeline-company" data-i18n="exp_company_5">Nelumbo Consultores</p>
+            <p class="timeline-description" data-i18n="exp_desc_5">
+              Built responsive websites and landing pages for diverse clients. 
+              Gained solid foundations in HTML, CSS, JavaScript, and WordPress 
+              theme development while collaborating in agile teams.
+            </p>
+            <div class="timeline-tags">
+              <span class="tag">HTML/CSS</span>
+              <span class="tag">JavaScript</span>
+              <span class="tag">WordPress</span>
+              <span class="tag">jQuery</span>
+            </div>
+          </div>
+        </div>
+        <div class="timeline-item reveal">
+          <div class="timeline-marker">
+            <div class="timeline-dot"></div>
+          </div>
+          <div class="timeline-content">
+            <div class="timeline-header">
+              <h3 class="timeline-role" data-i18n="exp_role_6">Junior WordPress Developer</h3>
+              <span class="timeline-period" data-i18n="exp_period_6">2018 — 2019</span>
+            </div>
+            <p class="timeline-company" data-i18n="exp_company_6">Development Agency</p>
+            <p class="timeline-description" data-i18n="exp_desc_6">
+              Developed custom WordPress themes and plugins. Implemented responsive 
+              designs, optimized site performance, and integrated third-party APIs 
+              for enhanced functionality.
+            </p>
+            <div class="timeline-tags">
+              <span class="tag">WordPress</span>
+              <span class="tag">PHP</span>
+              <span class="tag">JavaScript</span>
+              <span class="tag">Google Maps API</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+<!-- Projects Section -->
+    <!-- Projects Section -->
+  <section class="projects section" id="projects">
+    <div class="container">
+      <div class="section-header reveal">
+        <span class="section-eyebrow" data-i18n="proj_eyebrow">Selected Work</span>
+        <h2 class="section-title">
+          <span data-i18n="proj_title_1">Projects that </span>
+          <span class="text-accent" data-i18n="proj_title_2">matter</span>
+        </h2>
+      </div>
+      <div class="projects-grid">
+        <!-- Project 1 -->
+        <a href="https://unmetrocuadrado.com.ar/" target="_blank" rel="noopener" class="project-card reveal">
+          <div class="project-image-wrapper">
+            <img src="assets/projects/unm.png" alt="Unmetrocuadrado" class="project-image">
+            <div class="project-overlay">
+              <span class="project-view" data-i18n="proj_view">View Project →</span>
+            </div>
+          </div>
+          <div class="project-info">
+            <h3 class="project-title">Unmetrocuadrado</h3>
+            <p class="project-description">Real estate platform with modern property listings and search.</p>
+            <div class="project-tags">
+              <span class="tag">React</span>
+              <span class="tag">JavaScript</span>
+              <span class="tag">UI/UX</span>
+            </div>
+          </div>
+        </a>
+        <!-- Project 2 -->
+        <a href="https://outs.impulso360.es/" target="_blank" rel="noopener" class="project-card reveal">
+          <div class="project-image-wrapper">
+            <img src="assets/projects/outs.png" alt="Outs" class="project-image">
+            <div class="project-overlay">
+              <span class="project-view" data-i18n="proj_view">View Project →</span>
+            </div>
+          </div>
+          <div class="project-info">
+            <h3 class="project-title">Outs</h3>
+            <p class="project-description">Business solutions website with custom WordPress integrations.</p>
+            <div class="project-tags">
+              <span class="tag">WordPress</span>
+              <span class="tag">PHP</span>
+              <span class="tag">CSS</span>
+            </div>
+          </div>
+        </a>
+        <!-- Project 3 -->
+        <a href="https://arquiboutique.com/" target="_blank" rel="noopener" class="project-card reveal">
+          <div class="project-image-wrapper">
+            <img src="assets/projects/arq.png" alt="Arquiboutique" class="project-image">
+            <div class="project-overlay">
+              <span class="project-view" data-i18n="proj_view">View Project →</span>
+            </div>
+          </div>
+          <div class="project-info">
+            <h3 class="project-title">Arquiboutique</h3>
+            <p class="project-description">Architecture boutique brand website with elegant design.</p>
+            <div class="project-tags">
+              <span class="tag">WordPress</span>
+              <span class="tag">UI/UX</span>
+              <span class="tag">JavaScript</span>
+            </div>
+          </div>
+        </a>
+        <!-- Project 4 -->
+        <a href="https://patricio.com.uy/inicio/" target="_blank" rel="noopener" class="project-card reveal">
+          <div class="project-image-wrapper">
+            <img src="assets/projects/p19.png" alt="Patricio" class="project-image">
+            <div class="project-overlay">
+              <span class="project-view" data-i18n="proj_view">View Project →</span>
+            </div>
+          </div>
+          <div class="project-info">
+            <h3 class="project-title">Patricio</h3>
+            <p class="project-description">Professional portfolio website with custom theme development.</p>
+            <div class="project-tags">
+              <span class="tag">WordPress</span>
+              <span class="tag">PHP</span>
+              <span class="tag">CSS</span>
+            </div>
+          </div>
+        </a>
+        <!-- Project 5 -->
+        <a href="https://jakasarquitectura.com/" target="_blank" rel="noopener" class="project-card reveal">
+          <div class="project-image-wrapper">
+            <img src="assets/projects/p18.png" alt="Jakas Arquitectura" class="project-image">
+            <div class="project-overlay">
+              <span class="project-view" data-i18n="proj_view">View Project →</span>
+            </div>
+          </div>
+          <div class="project-info">
+            <h3 class="project-title">Jakas Arquitectura</h3>
+            <p class="project-description">Architecture firm website showcasing projects and services.</p>
+            <div class="project-tags">
+              <span class="tag">WordPress</span>
+              <span class="tag">JavaScript</span>
+              <span class="tag">Responsive</span>
+            </div>
+          </div>
+        </a>
+        <!-- Project 6 -->
+        <a href="https://interbadvisors.com/" target="_blank" rel="noopener" class="project-card reveal">
+          <div class="project-image-wrapper">
+            <img src="assets/projects/p17.png" alt="INTER B ADVISORS" class="project-image">
+            <div class="project-overlay">
+              <span class="project-view" data-i18n="proj_view">View Project →</span>
+            </div>
+          </div>
+          <div class="project-info">
+            <h3 class="project-title">INTER B ADVISORS</h3>
+            <p class="project-description">Financial advisory firm website with professional branding.</p>
+            <div class="project-tags">
+              <span class="tag">WordPress</span>
+              <span class="tag">PHP</span>
+              <span class="tag">CSS</span>
+            </div>
+          </div>
+        </a>
+        <!-- Project 7 -->
+        <a href="https://imoney.com.do/" target="_blank" rel="noopener" class="project-card reveal">
+          <div class="project-image-wrapper">
+            <img src="assets/projects/p16.png" alt="iMoney" class="project-image">
+            <div class="project-overlay">
+              <span class="project-view" data-i18n="proj_view">View Project →</span>
+            </div>
+          </div>
+          <div class="project-info">
+            <h3 class="project-title">iMoney</h3>
+            <p class="project-description">Financial services platform with modern web presence.</p>
+            <div class="project-tags">
+              <span class="tag">WordPress</span>
+              <span class="tag">JavaScript</span>
+              <span class="tag">CSS</span>
+            </div>
+          </div>
+        </a>
+        <!-- Project 8 -->
+        <a href="https://plumapro.es/" target="_blank" rel="noopener" class="project-card reveal">
+          <div class="project-image-wrapper">
+            <img src="assets/projects/p10.png" alt="PlumaPro" class="project-image">
+            <div class="project-overlay">
+              <span class="project-view" data-i18n="proj_view">View Project →</span>
+            </div>
+          </div>
+          <div class="project-info">
+            <h3 class="project-title">PlumaPro</h3>
+            <p class="project-description">Professional services website with clean design.</p>
+            <div class="project-tags">
+              <span class="tag">WordPress</span>
+              <span class="tag">PHP</span>
+              <span class="tag">CSS</span>
+            </div>
+          </div>
+        </a>
+        <!-- Project 9 -->
+        <a href="https://ipasgames.net" target="_blank" rel="noopener" class="project-card reveal">
+          <div class="project-image-wrapper">
+            <img src="assets/projects/p11.png" alt="IPAS Games" class="project-image">
+            <div class="project-overlay">
+              <span class="project-view" data-i18n="proj_view">View Project →</span>
+            </div>
+          </div>
+          <div class="project-info">
+            <h3 class="project-title">IPAS Games</h3>
+            <p class="project-description">Gaming community website with interactive features.</p>
+            <div class="project-tags">
+              <span class="tag">WordPress</span>
+              <span class="tag">JavaScript</span>
+              <span class="tag">PHP</span>
+            </div>
+          </div>
+        </a>
+        <!-- Project 10 -->
+        <a href="https://biodiversidad.co/" target="_blank" rel="noopener" class="project-card reveal">
+          <div class="project-image-wrapper">
+            <img src="assets/projects/p12.png" alt="Biodiversidad Colombia" class="project-image">
+            <div class="project-overlay">
+              <span class="project-view" data-i18n="proj_view">View Project →</span>
+            </div>
+          </div>
+          <div class="project-info">
+            <h3 class="project-title">Biodiversidad Colombia</h3>
+            <p class="project-description">Environmental conservation platform with rich content.</p>
+            <div class="project-tags">
+              <span class="tag">React</span>
+              <span class="tag">JavaScript</span>
+              <span class="tag">CSS</span>
+            </div>
+          </div>
+        </a>
+        <!-- Project 11 -->
+        <a href="https://www.betsweet.io/" target="_blank" rel="noopener" class="project-card reveal">
+          <div class="project-image-wrapper">
+            <img src="assets/projects/p15.png" alt="Betsweet" class="project-image">
+            <div class="project-overlay">
+              <span class="project-view" data-i18n="proj_view">View Project →</span>
+            </div>
+          </div>
+          <div class="project-info">
+            <h3 class="project-title">Betsweet</h3>
+            <p class="project-description">Gaming and betting platform with real-time features.</p>
+            <div class="project-tags">
+              <span class="tag">React</span>
+              <span class="tag">Node.js</span>
+              <span class="tag">WebSockets</span>
+            </div>
+          </div>
+        </a>
+        <!-- Project 12 -->
+        <a href="https://masquefrutafruterias.es/" target="_blank" rel="noopener" class="project-card reveal">
+          <div class="project-image-wrapper">
+            <img src="assets/projects/p13.png" alt="Mas que fruta fruterias" class="project-image">
+            <div class="project-overlay">
+              <span class="project-view" data-i18n="proj_view">View Project →</span>
+            </div>
+          </div>
+          <div class="project-info">
+            <h3 class="project-title">Mas que fruta fruterias</h3>
+            <p class="project-description">Fruit shop franchise website with store locator.</p>
+            <div class="project-tags">
+              <span class="tag">WordPress</span>
+              <span class="tag">PHP</span>
+              <span class="tag">Google Maps</span>
+            </div>
+          </div>
+        </a>
+        <!-- Project 13 -->
+        <a href="https://motivarnos.com/" target="_blank" rel="noopener" class="project-card reveal">
+          <div class="project-image-wrapper">
+            <img src="assets/projects/p1.png" alt="Motivarnos" class="project-image">
+            <div class="project-overlay">
+              <span class="project-view" data-i18n="proj_view">View Project →</span>
+            </div>
+          </div>
+          <div class="project-info">
+            <h3 class="project-title">Motivarnos</h3>
+            <p class="project-description">Motivational platform with engaging user experience.</p>
+            <div class="project-tags">
+              <span class="tag">UI/UX</span>
+              <span class="tag">React</span>
+              <span class="tag">CSS</span>
+            </div>
+          </div>
+        </a>
+        <!-- Project 14 -->
+        <a href="https://overoption.io/" target="_blank" rel="noopener" class="project-card reveal">
+          <div class="project-image-wrapper">
+            <img src="assets/projects/p2.png" alt="Overoption" class="project-image">
+            <div class="project-overlay">
+              <span class="project-view" data-i18n="proj_view">View Project →</span>
+            </div>
+          </div>
+          <div class="project-info">
+            <h3 class="project-title">Overoption</h3>
+            <p class="project-description">Options trading platform with data visualization.</p>
+            <div class="project-tags">
+              <span class="tag">React</span>
+              <span class="tag">JavaScript</span>
+              <span class="tag">Charts</span>
+            </div>
+          </div>
+        </a>
+        <!-- Project 15 -->
+        <a href="https://play.google.com/store/apps/details?id=com.maicolf604.calculator" target="_blank" rel="noopener" class="project-card reveal">
+          <div class="project-image-wrapper">
+            <img src="assets/projects/p14.png" alt="Lifestriving Calculadora" class="project-image">
+            <div class="project-overlay">
+              <span class="project-view" data-i18n="proj_view">View Project →</span>
+            </div>
+          </div>
+          <div class="project-info">
+            <h3 class="project-title">Lifestriving Calculadora</h3>
+            <p class="project-description">Mobile calculator app published on Google Play Store.</p>
+            <div class="project-tags">
+              <span class="tag">React Native</span>
+              <span class="tag">Mobile</span>
+              <span class="tag">Android</span>
+            </div>
+          </div>
+        </a>
+        <!-- Project 16 -->
+        <a href="https://elviejogarca.com/" target="_blank" rel="noopener" class="project-card reveal">
+          <div class="project-image-wrapper">
+            <img src="assets/projects/p10.png" alt="elviejogarca" class="project-image">
+            <div class="project-overlay">
+              <span class="project-view" data-i18n="proj_view">View Project →</span>
+            </div>
+          </div>
+          <div class="project-info">
+            <h3 class="project-title">elviejogarca</h3>
+            <p class="project-description">Restaurant website with menu showcase and reservations.</p>
+            <div class="project-tags">
+              <span class="tag">WordPress</span>
+              <span class="tag">PHP</span>
+              <span class="tag">JavaScript</span>
+            </div>
+          </div>
+        </a>
+        <!-- Project 17 -->
+        <a href="https://4toangulo.com/nosotros" target="_blank" rel="noopener" class="project-card reveal">
+          <div class="project-image-wrapper">
+            <img src="assets/projects/p3.png" alt="4To Angulo" class="project-image">
+            <div class="project-overlay">
+              <span class="project-view" data-i18n="proj_view">View Project →</span>
+            </div>
+          </div>
+          <div class="project-info">
+            <h3 class="project-title">4To Angulo</h3>
+            <p class="project-description">Creative agency website with bold visual identity.</p>
+            <div class="project-tags">
+              <span class="tag">React</span>
+              <span class="tag">JavaScript</span>
+              <span class="tag">CSS</span>
+            </div>
+          </div>
+        </a>
+        <!-- Project 18 -->
+        <a href="https://www.worldwidetechconnections.com/" target="_blank" rel="noopener" class="project-card reveal">
+          <div class="project-image-wrapper">
+            <img src="assets/projects/p4.png" alt="World Wide Tech Connections" class="project-image">
+            <div class="project-overlay">
+              <span class="project-view" data-i18n="proj_view">View Project →</span>
+            </div>
+          </div>
+          <div class="project-info">
+            <h3 class="project-title">World Wide Tech Connections</h3>
+            <p class="project-description">Tech consulting firm website with modern design.</p>
+            <div class="project-tags">
+              <span class="tag">React</span>
+              <span class="tag">JavaScript</span>
+              <span class="tag">Responsive</span>
+            </div>
+          </div>
+        </a>
+        <!-- Project 19 -->
+        <a href="https://www.nelumboconsultores.com/" target="_blank" rel="noopener" class="project-card reveal">
+          <div class="project-image-wrapper">
+            <img src="assets/projects/p5.png" alt="Nelumbo" class="project-image">
+            <div class="project-overlay">
+              <span class="project-view" data-i18n="proj_view">View Project →</span>
+            </div>
+          </div>
+          <div class="project-info">
+            <h3 class="project-title">Nelumbo</h3>
+            <p class="project-description">Consulting firm website with professional layout.</p>
+            <div class="project-tags">
+              <span class="tag">HTML</span>
+              <span class="tag">CSS</span>
+              <span class="tag">JavaScript</span>
+            </div>
+          </div>
+        </a>
+        <!-- Project 20 -->
+        <a href="https://dnatestingphiladelphia.com/" target="_blank" rel="noopener" class="project-card reveal">
+          <div class="project-image-wrapper">
+            <img src="assets/projects/p6.png" alt="DNA Testing Philadelphia" class="project-image">
+            <div class="project-overlay">
+              <span class="project-view" data-i18n="proj_view">View Project →</span>
+            </div>
+          </div>
+          <div class="project-info">
+            <h3 class="project-title">DNA Testing Philadelphia</h3>
+            <p class="project-description">Multi-location medical testing platform with geo-routing.</p>
+            <div class="project-tags">
+              <span class="tag">WordPress</span>
+              <span class="tag">PHP</span>
+              <span class="tag">Google Maps</span>
+            </div>
+          </div>
+        </a>
+        <!-- Project 21 -->
+        <a href="https://dnatestinginsandiego.com/" target="_blank" rel="noopener" class="project-card reveal">
+          <div class="project-image-wrapper">
+            <img src="assets/projects/p7.png" alt="DNA Testing San Diego" class="project-image">
+            <div class="project-overlay">
+              <span class="project-view" data-i18n="proj_view">View Project →</span>
+            </div>
+          </div>
+          <div class="project-info">
+            <h3 class="project-title">DNA Testing San Diego</h3>
+            <p class="project-description">Medical services site with appointment booking and results portal.</p>
+            <div class="project-tags">
+              <span class="tag">WordPress</span>
+              <span class="tag">PHP</span>
+              <span class="tag">JavaScript</span>
+            </div>
+          </div>
+        </a>
+        <!-- Project 22 -->
+        <a href="https://coolandpassion.com/" target="_blank" rel="noopener" class="project-card reveal">
+          <div class="project-image-wrapper">
+            <img src="assets/projects/p8.png" alt="Cool & Passion" class="project-image">
+            <div class="project-overlay">
+              <span class="project-view" data-i18n="proj_view">View Project →</span>
+            </div>
+          </div>
+          <div class="project-info">
+            <h3 class="project-title">Cool & Passion</h3>
+            <p class="project-description">Brand website with bold visual identity and smooth animations.</p>
+            <div class="project-tags">
+              <span class="tag">WordPress</span>
+              <span class="tag">JavaScript</span>
+              <span class="tag">CSS</span>
+            </div>
+          </div>
+        </a>
+        <!-- Project 23 -->
+        <a href="https://ladespensadeinaki.com/" target="_blank" rel="noopener" class="project-card project-card-featured reveal">
+          <div class="project-image-wrapper">
+            <img src="assets/projects/p9.png" alt="La Despensa de Iñaki" class="project-image">
+            <div class="project-overlay">
+              <span class="project-view" data-i18n="proj_view">View Project →</span>
+            </div>
+          </div>
+          <div class="project-info">
+            <h3 class="project-title">La Despensa de Iñaki</h3>
+            <p class="project-description">E-commerce platform for a gourmet food business.</p>
+            <div class="project-tags">
+              <span class="tag">WordPress</span>
+              <span class="tag">WooCommerce</span>
+              <span class="tag">PHP</span>
+            </div>
+          </div>
+        </a>
+      </div>
+    </div>
+  </section>
+
+<!-- Skills Section -->
+  <section class="skills section section-alt" id="skills">
+    <div class="container">
+      <div class="section-header reveal">
+        <span class="section-eyebrow" data-i18n="skills_eyebrow">Capabilities</span>
+        <h2 class="section-title">
+          <span data-i18n="skills_title_1">Tools & </span>
+          <span class="text-accent" data-i18n="skills_title_2">Technologies</span>
+        </h2>
+      </div>
+      <div class="skills-grid">
+        <div class="skill-category reveal">
+          <div class="skill-category-header">
+            <div class="skill-icon">
+              <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polygon points="1 6 1 22 8 18 16 22 21 18 21 2 16 6 8 2 1 6"></polygon><line x1="8" y1="2" x2="8" y2="18"></line><line x1="16" y1="6" x2="16" y2="22"></line></svg>
+            </div>
+            <h3 class="skill-category-title" data-i18n="skill_gis">GIS & Geospatial</h3>
+          </div>
+          <ul class="skill-list">
+            <li>Google Maps API</li>
+            <li>Leaflet / Mapbox</li>
+            <li>PostGIS & Spatial SQL</li>
+            <li>Traffic Data Processing</li>
+            <li>Real-time Visualization</li>
+            <li>GeoJSON & Shapefiles</li>
+          </ul>
+        </div>
+        <div class="skill-category reveal">
+          <div class="skill-category-header">
+            <div class="skill-icon">
+              <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 2a10 10 0 1 0 10 10H12V2z"></path><path d="M12 2a10 10 0 0 1 10 10"></path><path d="M12 12L2.5 7.5"></path></svg>
+            </div>
+            <h3 class="skill-category-title" data-i18n="skill_ai">AI & Agents</h3>
+          </div>
+          <ul class="skill-list">
+            <li>LLM Integration (OpenAI, Claude)</li>
+            <li>Agentic Workflows</li>
+            <li>Prompt Engineering</li>
+            <li>RAG Systems</li>
+            <li>Function Calling</li>
+            <li>AI API Architecture</li>
+          </ul>
+        </div>
+        <div class="skill-category reveal">
+          <div class="skill-category-header">
+            <div class="skill-icon">
+              <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="3" width="20" height="14" rx="2" ry="2"></rect><line x1="8" y1="21" x2="16" y2="21"></line><line x1="12" y1="17" x2="12" y2="21"></line></svg>
+            </div>
+            <h3 class="skill-category-title" data-i18n="skill_frontend">Frontend</h3>
+          </div>
+          <ul class="skill-list">
+            <li>React & Next.js</li>
+            <li>TypeScript</li>
+            <li>JavaScript (ES6+)</li>
+            <li>CSS / SCSS / Tailwind</li>
+            <li>HTML5 & Accessibility</li>
+            <li>Responsive Design</li>
+          </ul>
+        </div>
+        <div class="skill-category reveal">
+          <div class="skill-category-header">
+            <div class="skill-icon">
+              <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="16 18 22 12 16 6"></polyline><polyline points="8 6 2 12 8 18"></polyline></svg>
+            </div>
+            <h3 class="skill-category-title" data-i18n="skill_backend">Backend</h3>
+          </div>
+          <ul class="skill-list">
+            <li>Node.js & Express</li>
+            <li>Python</li>
+            <li>REST & GraphQL APIs</li>
+            <li>Microservices</li>
+            <li>Serverless Functions</li>
+            <li>WebSockets</li>
+          </ul>
+        </div>
+        <div class="skill-category reveal">
+          <div class="skill-category-header">
+            <div class="skill-icon">
+              <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><ellipse cx="12" cy="5" rx="9" ry="3"></ellipse><path d="M21 12c0 1.66-4 3-9 3s-9-1.34-9-3"></path><path d="M3 5v14c0 1.66 4 3 9 3s9-1.34 9-3V5"></path></svg>
+            </div>
+            <h3 class="skill-category-title" data-i18n="skill_data">Data</h3>
+          </div>
+          <ul class="skill-list">
+            <li>PostgreSQL / PostGIS</li>
+            <li>MongoDB</li>
+            <li>Firebase</li>
+            <li>Data Modeling</li>
+            <li>ETL Pipelines</li>
+            <li>Redis</li>
+          </ul>
+        </div>
+        <div class="skill-category reveal">
+          <div class="skill-category-header">
+            <div class="skill-icon">
+              <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M14.7 6.3a1 1 0 0 0 0 1.4l1.6 1.6a1 1 0 0 0 1.4 0l3.77-3.77a6 6 0 0 1-7.94 7.94l-6.91 6.91a2.12 2.12 0 0 1-3-3l6.91-6.91a6 6 0 0 1 7.94-7.94l-3.76 3.76z"></path></svg>
+            </div>
+            <h3 class="skill-category-title" data-i18n="skill_devops">DevOps & Tools</h3>
+          </div>
+          <ul class="skill-list">
+            <li>Git & GitHub</li>
+            <li>Docker</li>
+            <li>CI/CD (GitHub Actions)</li>
+            <li>WordPress</li>
+            <li>Twilio APIs</li>
+            <li>Azure Cloud</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Contact Section -->
+    <!-- Contact Section -->
+  <section class="contact section" id="contact">
+    <div class="container">
+      <div class="contact-grid">
+        <div class="contact-info reveal">
+          <span class="section-eyebrow" data-i18n="contact_eyebrow">Get in Touch</span>
+          <h2 class="section-title">
+            <span data-i18n="contact_title_1">Let's build something </span>
+            <span class="text-accent" data-i18n="contact_title_2">great</span>
+            <span data-i18n="contact_title_3"> together</span>
+          </h2>
+          <p class="contact-description" data-i18n="contact_desc">
+            Whether you need a geospatial dashboard, an AI-powered application, or a 
+            scalable full-stack solution — I'm ready to jump in and deliver.
+          </p>
+          <div class="contact-methods">
+            <a href="mailto:maicol.fario@gmail.com" class="contact-method">
+              <div class="contact-method-icon">
+                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"></path><polyline points="22,6 12,13 2,6"></polyline></svg>
+              </div>
+              <div class="contact-method-details">
+                <span class="contact-method-label" data-i18n="contact_email_label">Email</span>
+                <span class="contact-method-value">maicol.fario@gmail.com</span>
+              </div>
+            </a>
+          </div>
+        </div>
+        <div class="contact-form-wrapper reveal">
+          <form class="contact-form" id="contact-form">
+            <div class="form-group">
+              <label for="name" class="form-label" data-i18n="form_name">Name</label>
+              <input type="text" id="name" name="name" class="form-input" data-i18n-placeholder="form_name_placeholder" placeholder="Your name" required>
+            </div>
+            <div class="form-group">
+              <label for="email" class="form-label" data-i18n="form_email">Email</label>
+              <input type="email" id="email" name="email" class="form-input" data-i18n-placeholder="form_email_placeholder" placeholder="your@email.com" required>
+            </div>
+            <div class="form-group">
+              <label for="message" class="form-label" data-i18n="form_message">Message</label>
+              <textarea id="message" name="message" class="form-textarea" rows="5" data-i18n-placeholder="form_message_placeholder" placeholder="Tell me about your project..." required></textarea>
+            </div>
+            <button type="submit" class="btn btn-primary btn-full" data-i18n="form_submit">Send Message</button>
+          </form>
+        </div>
+      </div>
+    </div>
+  </section>
+
+<!-- Footer -->
+  <footer class="footer">
+    <div class="container">
+      <div class="footer-content">
+        <div class="footer-left">
+          <span class="footer-name">Maicol Fariño</span>
+          <span class="footer-tagline" data-i18n="footer_tagline">Software Engineer · GIS · AI</span>
+        </div>
+        <div class="footer-right">
+          <span class="footer-built" data-i18n="footer_built">Built with vanilla HTML, CSS & JS</span>
+          <span class="footer-year">© 2025</span>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <script src="i18n.js"></script>
+  <script src="script.js"></script>
+</body>
+</html>
