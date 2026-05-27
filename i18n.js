@@ -16,6 +16,8 @@ const translations = {
     hero_badge: 'Available for work',
     hero_title_1: 'Maicol',
     hero_title_2: 'Fariño',
+    page_title: 'Maicol Fariño — Software Engineer | GIS & AI | Portfolio',
+    meta_description: 'Maicol Fariño — Software Engineer specializing in geospatial systems, intelligent traffic platforms, and AI-driven applications. 7+ years building scalable solutions for European urban transportation and smart city projects.',
     hero_subtitle: 'Software Engineer · GIS & Traffic Systems · AI Agents',
     hero_desc: 'Building scalable solutions at the intersection of geospatial data, traffic intelligence, and autonomous AI. I design clean, testable systems that solve real-world problems.',
     hero_cta_primary: 'View Projects',
@@ -121,6 +123,8 @@ const translations = {
     hero_badge: 'Disponible para trabajar',
     hero_title_1: 'Maicol',
     hero_title_2: 'Fariño',
+    page_title: 'Maicol Fariño — Ingeniero de Software | GIS & IA | Portfolio',
+    meta_description: 'Maicol Fariño — Ingeniero de Software especializado en sistemas geoespaciales, plataformas inteligentes de tráfico y aplicaciones impulsadas por IA. Más de 7 años construyendo soluciones escalables para transporte urbano en Europa y ciudades inteligentes.',
     hero_subtitle: 'Ingeniero de Software · GIS y Tráfico · Agentes de IA',
     hero_desc: 'Construyendo soluciones escalables en la intersección de datos geoespaciales, inteligencia de tráfico e IA autónoma. Diseño sistemas limpios y testeables que resuelven problemas reales.',
     hero_cta_primary: 'Ver Proyectos',
@@ -283,11 +287,16 @@ function updatePageContent() {
   // Update meta description
   const metaDesc = document.querySelector('meta[name="description"]');
   if (metaDesc) {
-    metaDesc.setAttribute('content', t('hero_desc'));
+    metaDesc.setAttribute('content', t('meta_description'));
+  }
+
+  const metaTitle = document.querySelector('meta[name="title"]');
+  if (metaTitle) {
+    metaTitle.setAttribute('content', t('page_title'));
   }
 
   // Update title
-  document.title = t('hero_subtitle') + ' — Maicol Fariño';
+  document.title = t('page_title');
 }
 
 function updateLangSelector() {
