@@ -77,6 +77,10 @@ body, .nav, .nav.scrolled, .mobile-menu, .section, .section-alt,
     --shadow: 0 4px 6px -1px rgb(0 0 0 / 0.4), 0 2px 4px -2px rgb(0 0 0 / 0.4);
     --shadow-lg: 0 10px 15px -3px rgb(0 0 0 / 0.5), 0 4px 6px -4px rgb(0 0 0 / 0.5);
   }
+
+  :root:not([data-theme="light"]) .nav.scrolled {
+    background: rgba(10, 10, 10, 0.85);
+  }
 }
 
 html {
@@ -229,6 +233,10 @@ ul {
   -webkit-backdrop-filter: blur(12px);
   box-shadow: var(--shadow-sm);
   padding: 0.875rem 0;
+}
+
+[data-theme="dark"] .nav.scrolled {
+  background: rgba(10, 10, 10, 0.85);
 }
 
 .nav-container {
