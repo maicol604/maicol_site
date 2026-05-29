@@ -607,14 +607,8 @@ ul {
   border-radius: var(--radius-lg);
   position: relative;
   z-index: 2;
-  filter: grayscale(20%);
-  transition: filter 0.5s ease;
   transform-origin: bottom;
   transform: scale(1.25);
-}
-
-.hero-image-wrapper:hover .hero-image {
-  filter: grayscale(0%);
 }
 
 .hero-image-accent {
