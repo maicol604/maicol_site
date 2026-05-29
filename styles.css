@@ -609,6 +609,12 @@ ul {
   z-index: 2;
   transform-origin: bottom;
   transform: scale(1.25);
+  opacity: 1;
+  transition: opacity 0.8s ease;
+}
+
+.hero-image.is-fading-out {
+  opacity: 0;
 }
 
 .hero-image-accent {

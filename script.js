@@ -219,9 +219,8 @@ document.addEventListener('i18n-ready', () => {
 
 /* ============================================
    HERO VIDEO ANIMATION
-   Forward (0%→80%) → Pause → Reverse (80%→0%) → Pause → Loop
-   Uses native playback with two pre-rendered clips
-   for perfectly smooth, bidirectional animation.
+   Play → Fade Out → Pause → Fade In → Repeat
+   Simple, smooth infinite loop with opacity transitions.
    ============================================ */
 function initHeroVideo() {
   const video = document.querySelector('.hero-image');
@@ -229,46 +228,28 @@ function initHeroVideo() {
 
   // Respect reduced motion preference
   if (window.matchMedia('(prefers-reduced-motion: reduce)').matches) {
-    video.src = 'assets/maicol_forward.webm';
     video.currentTime = 0;
     video.pause();
     return;
   }
 
-  const PAUSE_AT_END = 2500;   // ms to hold on 80% frame
-  const PAUSE_AT_START = 1500; // ms to hold on 0% frame
+  const FADE_DURATION = 800;  // ms
+  const PAUSE_AT_END = 1200;  // ms hold on last frame before restart
 
-  function playForward() {
-    video.src = 'assets/maicol_forward.webm';
+  function restart() {
     video.currentTime = 0;
+    video.classList.remove('is-fading-out');
     video.play().catch(() => {});
-
-    video.onended = () => {
-      setTimeout(() => {
-        playReverse();
-      }, PAUSE_AT_END);
-    };
   }
 
-  function playReverse() {
-    video.src = 'assets/maicol_reverse.webm';
-    video.currentTime = 0;
-    video.play().catch(() => {});
+  video.onended = () => {
+    video.classList.add('is-fading-out');
+    setTimeout(() => {
+      restart();
+    }, FADE_DURATION + PAUSE_AT_END);
+  };
 
-    video.onended = () => {
-      setTimeout(() => {
-        playForward();
-      }, PAUSE_AT_START);
-    };
-  }
-
-  // Start once forward metadata is loaded
-  video.src = 'assets/maicol_forward.webm';
-  if (video.readyState >= 1) {
-    playForward();
-  } else {
-    video.addEventListener('loadedmetadata', playForward, { once: true });
-  }
+  video.play().catch(() => {});
 }
 
 /* ============================================
