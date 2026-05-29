@@ -219,9 +219,9 @@ document.addEventListener('i18n-ready', () => {
 
 /* ============================================
    HERO VIDEO ANIMATION
-   Forward → Pause → Reverse → Pause → Loop
-   Uses requestAnimationFrame for both directions
-   to guarantee smooth, consistent playback.
+   Forward (0%→80%) → Pause → Reverse (80%→0%) → Pause → Loop
+   Uses native playback with two pre-rendered clips
+   for perfectly smooth, bidirectional animation.
    ============================================ */
 function initHeroVideo() {
   const video = document.querySelector('.hero-image');
@@ -229,73 +229,45 @@ function initHeroVideo() {
 
   // Respect reduced motion preference
   if (window.matchMedia('(prefers-reduced-motion: reduce)').matches) {
-    video.pause();
+    video.src = 'assets/maicol_forward.webm';
     video.currentTime = 0;
+    video.pause();
     return;
   }
 
-  const PAUSE_AT_END = 2500;   // ms to hold on last frame
-  const PAUSE_AT_START = 1500; // ms to hold on first frame
+  const PAUSE_AT_END = 2500;   // ms to hold on 80% frame
+  const PAUSE_AT_START = 1500; // ms to hold on 0% frame
 
-  let state = 'forward';       // forward | pause_end | reverse | pause_start
-  let lastTime = 0;
-  let pauseUntil = 0;
-  let rafId = null;
+  function playForward() {
+    video.src = 'assets/maicol_forward.webm';
+    video.currentTime = 0;
+    video.play().catch(() => {});
 
-  function tick(now) {
-    if (state === 'forward') {
-      if (!lastTime) lastTime = now;
-      const delta = (now - lastTime) / 1000;
-      lastTime = now;
-
-      video.currentTime += delta;
-
-      if (video.currentTime >= video.duration) {
-        video.currentTime = video.duration;
-        state = 'pause_end';
-        pauseUntil = now + PAUSE_AT_END;
-        lastTime = 0;
-      }
-    } else if (state === 'pause_end') {
-      if (now >= pauseUntil) {
-        state = 'reverse';
-        lastTime = 0;
-      }
-    } else if (state === 'reverse') {
-      if (!lastTime) lastTime = now;
-      const delta = (now - lastTime) / 1000;
-      lastTime = now;
-
-      video.currentTime -= delta;
-
-      if (video.currentTime <= 0) {
-        video.currentTime = 0;
-        state = 'pause_start';
-        pauseUntil = now + PAUSE_AT_START;
-        lastTime = 0;
-      }
-    } else if (state === 'pause_start') {
-      if (now >= pauseUntil) {
-        state = 'forward';
-        lastTime = 0;
-      }
-    }
-
-    rafId = requestAnimationFrame(tick);
+    video.onended = () => {
+      setTimeout(() => {
+        playReverse();
+      }, PAUSE_AT_END);
+    };
   }
 
-  function start() {
-    if (rafId) cancelAnimationFrame(rafId);
-    state = 'forward';
-    lastTime = 0;
-    pauseUntil = 0;
-    rafId = requestAnimationFrame(tick);
+  function playReverse() {
+    video.src = 'assets/maicol_reverse.webm';
+    video.currentTime = 0;
+    video.play().catch(() => {});
+
+    video.onended = () => {
+      setTimeout(() => {
+        playForward();
+      }, PAUSE_AT_START);
+    };
   }
 
+  // Start once forward metadata is loaded
+  video.src = 'assets/maicol_forward.webm';
   if (video.readyState >= 1) {
-    start();
+    playForward();
   } else {
-    video.addEventListener('loadedmetadata', start, { once: true });
+    video.addEventListener('loadedmetadata', playForward, { once: true });
   }
 }
 
