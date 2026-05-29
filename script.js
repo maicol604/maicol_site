@@ -233,20 +233,13 @@ function initHeroVideo() {
     return;
   }
 
-  const FADE_DURATION = 800;  // ms
-  const PAUSE_AT_END = 1200;  // ms hold on last frame before restart
-
-  function restart() {
-    video.currentTime = 0;
-    video.classList.remove('is-fading-out');
-    video.play().catch(() => {});
-  }
+  const PAUSE_AT_END = 120000;  // 2 minutes frozen on last frame
 
   video.onended = () => {
-    video.classList.add('is-fading-out');
     setTimeout(() => {
-      restart();
-    }, FADE_DURATION + PAUSE_AT_END);
+      video.currentTime = 0;
+      video.play().catch(() => {});
+    }, PAUSE_AT_END);
   };
 
   video.play().catch(() => {});
