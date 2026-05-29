@@ -207,12 +207,78 @@ document.addEventListener('i18n-ready', () => {
   document.querySelectorAll('.reveal:not(.visible)').forEach(el => {
     revealObserver.observe(el);
   });
-  
+
   // Only run typing effect on larger screens
   if (window.innerWidth >= 768) {
     initTypingEffect();
   }
+
+  // Start hero video animation loop
+  initHeroVideo();
 });
+
+/* ============================================
+   HERO VIDEO ANIMATION
+   Forward → Pause → Reverse → Loop
+   ============================================ */
+function initHeroVideo() {
+  const video = document.querySelector('.hero-image');
+  if (!video || video.tagName !== 'VIDEO') return;
+
+  // Respect reduced motion preference
+  if (window.matchMedia('(prefers-reduced-motion: reduce)').matches) {
+    video.pause();
+    video.currentTime = 0;
+    return;
+  }
+
+  const PAUSE_AT_END = 2500;   // ms to hold on last frame
+  const PAUSE_AT_START = 800;  // ms to hold on first frame
+
+  function playForward() {
+    video.playbackRate = 1;
+    video.play().catch(() => {});
+
+    video.onended = () => {
+      video.pause();
+      setTimeout(() => {
+        playReverse();
+      }, PAUSE_AT_END);
+    };
+  }
+
+  function playReverse() {
+    video.pause();
+    video.onended = null;
+
+    let lastTime = performance.now();
+
+    function step(now) {
+      const delta = (now - lastTime) / 1000;
+      lastTime = now;
+
+      video.currentTime = Math.max(0, video.currentTime - delta);
+
+      if (video.currentTime <= 0) {
+        video.currentTime = 0;
+        setTimeout(() => {
+          playForward();
+        }, PAUSE_AT_START);
+        return;
+      }
+
+      requestAnimationFrame(step);
+    }
+
+    requestAnimationFrame(step);
+  }
+
+  if (video.readyState >= 1) {
+    playForward();
+  } else {
+    video.addEventListener('loadedmetadata', playForward, { once: true });
+  }
+}
 
 /* ============================================
    CONSOLE SIGNATURE
