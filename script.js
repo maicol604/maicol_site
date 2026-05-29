@@ -162,7 +162,7 @@ contactForm.addEventListener('submit', (e) => {
   // Create mailto link
   const subject = encodeURIComponent(`Contact from ${name} via Portfolio`);
   const body = encodeURIComponent(`Name: ${name}\nEmail: ${email}\n\nMessage:\n${message}`);
-  const mailtoLink = `mailto:maicol.fario@gmail.com?subject=${subject}&body=${body}`;
+  const mailtoLink = `mailto:maicol.fdev@gmail.com?subject=${subject}&body=${body}`;
   
   window.location.href = mailtoLink;
   
